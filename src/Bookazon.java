@@ -69,7 +69,7 @@ public class Bookazon {
         // bookazon.users.get(0).checkout();
 
         // // view order details
-        // bookazon.users.get(0).viewOrders();
+        bookazon.inventory.getItem(2).printDetails();
         
     }
 }
