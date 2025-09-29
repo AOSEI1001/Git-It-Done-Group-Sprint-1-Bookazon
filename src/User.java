@@ -12,7 +12,6 @@ public abstract class User {
 
     public User(String userName){
         this.userName = userName;
-=======
         this.cart = new Cart();
         this.orders = new ArrayList<>();
     }
