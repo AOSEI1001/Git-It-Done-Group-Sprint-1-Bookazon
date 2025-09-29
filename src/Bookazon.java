@@ -63,8 +63,8 @@ public class Bookazon {
         bookazon.addBook(new Book("1984", "George Orwell", 1949, 8.99, true));
 
         // create users
-        bookazon.addUser(new User("Alice"));
-        bookazon.addUser(new User("Bob"));
+        bookazon.addUser(new SubscriptionNormal("Alice"));
+        bookazon.addUser(new SubscriptionGold("Bob"));
 
         // add books to cart
         bookazon.users.get(0).addToCart(bookazon.books.get(0), 1);
@@ -74,8 +74,8 @@ public class Bookazon {
         bookazon.users.get(0).viewCart();
 
         // set shipping address and billing address
-        bookazon.users.get(0).setShippingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
-        bookazon.users.get(0).setBillingAddress("456 Elm St", "", "Springfield", "IL", "62702", "USA");
+        // bookazon.users.get(0).setShippingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
+        // bookazon.users.get(0).setBillingAddress("456 Elm St", "", "Springfield", "IL", "62702", "USA");
 
         // checkout
         bookazon.users.get(0).checkout();

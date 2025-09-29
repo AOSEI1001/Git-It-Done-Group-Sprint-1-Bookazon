@@ -5,7 +5,6 @@ public class SubscriptionGold extends User {
     public SubscriptionGold(String userName) {
         super(userName);
     }
-
 	
 	public double getDiscount() {
 		return GOLDDISC;

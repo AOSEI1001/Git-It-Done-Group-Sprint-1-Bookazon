@@ -6,6 +6,6 @@ public class SubscriptionSilver extends User {
         super(userName);
     }
 	public double getDiscount() {
-		return 0.05;
+		return SILVERDISC;
 	}
 }
