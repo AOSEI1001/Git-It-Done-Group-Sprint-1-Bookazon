@@ -47,10 +47,7 @@ public class Bookazon {
         book.setPaperback(isPaperback);
     }
 
-    // to be deleted
-    // public void updateRole(User user, String role) {
-    //     user.setSubscription(role);
-    // }
+
 
     
     public static void main(String[] args) {
@@ -79,7 +76,7 @@ public class Bookazon {
 
 
         // checkout
-        bookazon.users.get(0).checkout();
+        // bookazon.users.get(0).checkout();
 
         // view order details
         bookazon.users.get(0).viewOrders();

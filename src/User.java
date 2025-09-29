@@ -46,12 +46,11 @@ public abstract class User {
     }
 
    
-
     public void checkout() {
         Order order = new Order(cart);
         order.setOrderStatus("Order Placed");
         order.setDateCreated("2024-01-01");
-        order.setUserName(this.userName);
+        // order.setUserName(this.userName);
         orders.add(order);
         // add shipping and bill address
     }
