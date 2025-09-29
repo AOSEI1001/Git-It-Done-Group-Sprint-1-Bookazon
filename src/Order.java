@@ -7,6 +7,7 @@ public class Order {
     private String orderStatus;
     private Address shippingAddress;
     private Address billingAddress;
+    private User user;
     
     private ArrayList<CartItem> items;
     private double orderPrice;
@@ -32,7 +33,7 @@ public class Order {
         this.userName = name;
     }
 
-    public void printOrderDetails() {
+    public void printOrderDetails(User user) {
         System.out.println("Order Details:");
         System.out.println("Date Created: " + dateCreated);
         System.out.println("Date Shipped: " + dateShipped);
@@ -41,6 +42,7 @@ public class Order {
         System.out.println("Shipping Address: " + this.shippingAddress);
         System.out.println("Shipping Address: " + this.billingAddress);
         System.out.println("Order Price: $" + orderPrice);
+        System.out.println("Discount:"+ user.getDiscount());
     }
 
     public double calculatePrice(User user) {
