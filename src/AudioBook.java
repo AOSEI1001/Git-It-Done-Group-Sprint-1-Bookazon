@@ -1,14 +1,14 @@
 public class AudioBook extends MediaType{
     private String author;
     private String narrator;
-    private int audioLength;
+    private int minuteDuration;
 
 
-    public AudioBook(String title, int yearPublished, double price, String author, String narrator, int audioLength){
+    public AudioBook(String title, int yearPublished, double price, String author, String narrator, int minuteDuration){
         super(title, yearPublished, price);
         this.author = author;
         this.narrator = narrator;
-        this.audioLength = audioLength;
+        this.minuteDuration = minuteDuration;
 
     }
 
@@ -28,11 +28,21 @@ public class AudioBook extends MediaType{
         this.narrator = narrator;
     }
 
+    public void setminuteDuration(int duration) {
+        this.minuteDuration = duration;
+    }
+
+    public String getminuteDuration() {
+        int hours = minuteDuration / 60;
+        int minutes = minuteDuration % 60;
+        return String.format("%d hours and %d minutes", hours, minutes);
+    }
+
     public void printDetails(){
         System.out.println("Title: " + getTitle());
         System.out.println("Author: " + getAuthor());
         System.out.println("Author: " + getNarrator());
-
+        System.out.println("Audio Length: " + getminuteDuration());
         System.out.println("Year Published: " + getYearPublished());
         System.out.println("Price: $" + getPrice());
     }
