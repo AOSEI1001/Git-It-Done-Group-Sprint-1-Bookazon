@@ -50,6 +50,5 @@ public abstract class User {
         // add shipping and bill address
     }
 
-
     protected abstract double getDiscount();
 }
