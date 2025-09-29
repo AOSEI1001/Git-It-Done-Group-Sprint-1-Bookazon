@@ -16,7 +16,6 @@ public class Order {
         this.orderPrice = 1;
     }
 
-
     public void setOrderStatus(String status) {
         this.orderStatus = status;
     }
@@ -49,7 +48,7 @@ public class Order {
         for (CartItem item : items) {
             totalPrice += item.getTotalPrice();
         }
-        totalPrice = user.getDiscount() * totalPrice;
+        totalPrice = (1 - user.getDiscount()) * totalPrice;
         return totalPrice;
     }
 }
