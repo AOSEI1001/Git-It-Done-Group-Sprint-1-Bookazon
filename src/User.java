@@ -73,5 +73,3 @@ public class User {
         orders.add(order);
     }
 }
-
-
