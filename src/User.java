@@ -6,9 +6,6 @@ public abstract class User {
     private final String userName;
     protected final Cart cart;
     protected final ArrayList<Order> orders;
-    private Address shippingAddress;
-    private Address billingAddress;
-
 
     public User(String userName){
         this.userName = userName;
@@ -23,7 +20,6 @@ public abstract class User {
     public void viewCart(){
         cart.viewCartDetails();
     }
-
 
     public void addToCart(Book book, int quantity){
         cart.addItem(new CartItem(book.getTitle(), book.getPrice(), quantity));
@@ -44,8 +40,6 @@ public abstract class User {
             order.printOrderDetails();
         }
     }
-
-   
 
     public void checkout() {
         Order order = new Order(cart);

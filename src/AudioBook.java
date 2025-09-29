@@ -41,7 +41,7 @@ public class AudioBook extends MediaType{
     public void printDetails(){
         System.out.println("Title: " + getTitle());
         System.out.println("Author: " + getAuthor());
-        System.out.println("Author: " + getNarrator());
+        System.out.println("Narrator: " + getNarrator());
         System.out.println("Audio Length: " + getminuteDuration());
         System.out.println("Year Published: " + getYearPublished());
         System.out.println("Price: $" + getPrice());
