@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Order {
     private String dateCreated;
     private String dateShipped;
-    private User userName;
+    private String userName;
     private String orderStatus;
     private Address shippingAddress;
     private Address billingAddress;
@@ -14,9 +14,7 @@ public class Order {
 
     public Order(Cart cart, User user) {
         this.items = cart.getItems();
-
-        this.orderPrice = calculatePrice(userName);
-
+        this.orderPrice = calculatePrice(user);
     }
 
     public void setOrderStatus(String status) {
@@ -31,8 +29,8 @@ public class Order {
         this.dateShipped = date;
     }
 
-    public void setUserName(User user) {
-        this.userName = user;
+    public void setUserName(String name) {
+        this.userName = name;
     }
 
     public void printOrderDetails(User user) {
