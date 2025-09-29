@@ -12,7 +12,6 @@ public abstract class User {
 
     public User(String userName){
         this.userName = userName;
-=======
         this.cart = new Cart();
         this.orders = new ArrayList<>();
     }
@@ -49,7 +48,7 @@ public abstract class User {
    
 
     public void checkout() {
-        Order order = new Order(cart, null);
+        Order order = new Order(cart);
         order.setOrderStatus("Order Placed");
         order.setDateCreated("2024-01-01");
         order.setUserName(this.userName);
