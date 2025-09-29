@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 public abstract class User {
@@ -6,9 +5,6 @@ public abstract class User {
     private final String userName;
     protected final Cart cart;
     protected final ArrayList<Order> orders;
-    private Address shippingAddress;
-    private Address billingAddress;
-
 
     public User(String userName){
         this.userName = userName;
@@ -23,7 +19,6 @@ public abstract class User {
     public void viewCart(){
         cart.viewCartDetails();
     }
-
 
     public void addToCart(Book book, int quantity){
         cart.addItem(new CartItem(book.getTitle(), book.getPrice(), quantity));
@@ -41,19 +36,18 @@ public abstract class User {
 
     public void viewOrders(){
         for (Order order : orders) {
-            order.printOrderDetails();
+            order.printOrderDetails(this);
         }
     }
 
     public void checkout() {
-        Order order = new Order(cart);
+        Order order = new Order(cart, this);
         order.setOrderStatus("Order Placed");
         order.setDateCreated("2024-01-01");
-        order.setUserName(this.userName);
+        // order.setUserName(this.userName);
         orders.add(order);
         // add shipping and bill address
     }
-
 
     protected abstract double getDiscount();
 }
