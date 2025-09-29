@@ -4,10 +4,10 @@ public class Address {
     private String line2;
     private String city;
     private String state;
-    private ZipCode zip;
-    private Country country;
+    private String zip;
+    private String country;
 
-    public Address(String line1, String line2, String city, String state, ZipCode zip, Country country){
+    public Address(String line1, String line2, String city, String state, String zip, String country){
         this.line1 = line1;
         this.line2 = line2;
         this.city = city;
