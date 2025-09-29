@@ -11,12 +11,12 @@ public class Order {
     private ArrayList<CartItem> items;
     private double orderPrice;
 
-    public Order(Cart cart) {
+    public Order(Cart cart, User user) {
         this.items = cart.getItems();
-        this.orderPrice = calculatePrice(userName);
-    }
 
-    
+        this.orderPrice = calculatePrice(userName);
+
+    }
 
     public void setOrderStatus(String status) {
         this.orderStatus = status;
@@ -50,7 +50,7 @@ public class Order {
         for (CartItem item : items) {
             totalPrice += item.getTotalPrice();
         }
-        totalPrice = user.getDiscount() * totalPrice;
+        totalPrice = (1 - user.getDiscount()) * totalPrice;
         return totalPrice;
     }
 }
