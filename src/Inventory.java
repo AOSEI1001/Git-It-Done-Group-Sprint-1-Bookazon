@@ -11,6 +11,10 @@ public class Inventory {
         media.add(item);
     }
 
+    public MediaType getItem(int itemIndex){
+        return media.get(itemIndex);
+    }
+
     public void removeItem(MediaType item){
         media.remove(item);
     }
