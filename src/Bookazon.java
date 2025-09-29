@@ -66,6 +66,9 @@ public class Bookazon {
 
         // // view order details
         bookazon.inventory.getItem(2).printDetails();
+
+        // view order details
+        bookazon.users.get(0).viewOrders();
         
     }
 }
