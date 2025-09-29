@@ -36,7 +36,7 @@ public abstract class User {
 
     public void viewOrders(){
         for (Order order : orders) {
-            order.printOrderDetails();
+            order.printOrderDetails(this);
         }
     }
 
