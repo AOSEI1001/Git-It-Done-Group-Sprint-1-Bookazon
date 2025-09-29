@@ -51,11 +51,11 @@ public class Bookazon {
         bookazon.addUser(new SubscriptionGold("Bob"));
 
         // add books to cart
-        // bookazon.users.get(0).addToCart(bookazon.inventory.getItem(0), 1);
-        // bookazon.users.get(0).addToCart(bookazon.inventory.getItem(1), 2);
+        bookazon.users.get(0).addToCart(bookazon.inventory.getItem(0), 1);
+        bookazon.users.get(0).addToCart(bookazon.inventory.getItem(1), 2);
 
         // // view cart
-        // bookazon.users.get(0).viewCart();
+        bookazon.users.get(0).viewCart();
 
         // // set shipping address and billing address
         // // bookazon.users.get(0).setShippingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
