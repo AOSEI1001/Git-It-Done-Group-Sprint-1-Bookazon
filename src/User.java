@@ -6,6 +6,8 @@ public abstract class User {
     private final String userName;
     protected final Cart cart;
     protected final ArrayList<Order> orders;
+    private Address shippingAddress;
+    private Address billingAddress;
 
 
     public User(String userName){
@@ -48,12 +50,11 @@ public abstract class User {
 
     public void checkout() {
         Order order = new Order(cart, null);
-        // order.setShippingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
-        // order.setBillingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
         order.setOrderStatus("Order Placed");
         order.setDateCreated("2024-01-01");
         order.setUserName(this.userName);
         orders.add(order);
+        // add shipping and bill address
     }
 
 
