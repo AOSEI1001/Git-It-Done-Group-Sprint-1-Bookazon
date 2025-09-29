@@ -3,6 +3,12 @@ public abstract class MediaType {
     protected int yearPublished;
     protected double price;
 
+    public MediaType(String title, int yearPublished, double price){
+        this.title = title;
+        this.yearPublished = yearPublished;
+        this.price = price;
+    }
+    
     public String getTitle() {
         return title;
     }
