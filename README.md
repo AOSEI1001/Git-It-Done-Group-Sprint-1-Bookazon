@@ -1,6 +1,13 @@
 # Group Sprint 1: Bookazon
 An assignment for redesigning software and refactoring code smells.  Part of Software Engineering class CS321, Fall 2025.
 
+# TEAM: Git It Done
+- Repo Manager: 
+- Backlog Manager: 
+- 
+- 
+
+
 ## Project Objectives
 - Practice redesigning a software project with guidance from **SOLID design principles**.
 - Refactor code to address **design smells** and enhance **readability** and **maintainability**.

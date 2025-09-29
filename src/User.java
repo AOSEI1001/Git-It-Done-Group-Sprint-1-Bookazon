@@ -20,13 +20,13 @@ public abstract class User {
         cart.viewCartDetails();
     }
 
-    public void addToCart(Book book, int quantity){
-        cart.addItem(new CartItem(book.getTitle(), book.getPrice(), quantity));
+    public void addToCart(MediaType media, int quantity){
+        cart.addItem(new CartItem(media.getTitle(), media.getPrice(), quantity));
     }
 
-    public void removeFromCart(Book book){
+    public void removeFromCart(MediaType media){
         for (CartItem item : cart.getItems()) {
-            if (item.getName().equals(book.getTitle())) {
+            if (item.getName().equals(media.getTitle())) {
                 cart.getItems().remove(item);
                 break;
             }
@@ -36,7 +36,7 @@ public abstract class User {
 
     public void viewOrders(){
         for (Order order : orders) {
-            order.printOrderDetails();
+            order.printOrderDetails(this);
         }
     }
 
@@ -44,7 +44,7 @@ public abstract class User {
         Order order = new Order(cart, this);
         order.setOrderStatus("Order Placed");
         order.setDateCreated("2024-01-01");
-        order.setName(this.userName);
+        //order.setUserName(userName);
         orders.add(order);
         // add shipping and bill address
     }
