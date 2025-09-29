@@ -20,13 +20,13 @@ public abstract class User {
         cart.viewCartDetails();
     }
 
-    public void addToCart(MediaType book, int quantity){
-        cart.addItem(new CartItem(book.getTitle(), book.getPrice(), quantity));
+    public void addToCart(MediaType media, int quantity){
+        cart.addItem(new CartItem(media.getTitle(), media.getPrice(), quantity));
     }
 
-    public void removeFromCart(MediaType book){
+    public void removeFromCart(MediaType media){
         for (CartItem item : cart.getItems()) {
-            if (item.getName().equals(book.getTitle())) {
+            if (item.getName().equals(media.getTitle())) {
                 cart.getItems().remove(item);
                 break;
             }
