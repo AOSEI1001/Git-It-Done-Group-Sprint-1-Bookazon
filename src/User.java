@@ -41,7 +41,7 @@ public abstract class User {
     }
 
     public void checkout() {
-        Order order = new Order(cart);
+        Order order = new Order(cart, this);
         order.setOrderStatus("Order Placed");
         order.setDateCreated("2024-01-01");
         order.setUserName(this.userName);

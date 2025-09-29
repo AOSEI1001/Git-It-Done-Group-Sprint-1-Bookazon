@@ -11,9 +11,9 @@ public class Order {
     private ArrayList<CartItem> items;
     private double orderPrice;
 
-    public Order(Cart cart) {
+    public Order(Cart cart, User user) {
         this.items = cart.getItems();
-        this.orderPrice = 1;
+        this.orderPrice = calculatePrice(user);
     }
 
     public void setOrderStatus(String status) {
