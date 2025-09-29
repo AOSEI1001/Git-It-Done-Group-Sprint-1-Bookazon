@@ -47,10 +47,7 @@ public class Bookazon {
         book.setPaperback(isPaperback);
     }
 
-    // to be deleted
-    // public void updateRole(User user, String role) {
-    //     user.setSubscription(role);
-    // }
+
 
     
     public static void main(String[] args) {
@@ -78,7 +75,7 @@ public class Bookazon {
         // bookazon.users.get(0).setBillingAddress("456 Elm St", "", "Springfield", "IL", "62702", "USA");
 
         // checkout
-        bookazon.users.get(0).checkout();
+        // bookazon.users.get(0).checkout();
 
         // view order details
         bookazon.users.get(0).viewOrders();

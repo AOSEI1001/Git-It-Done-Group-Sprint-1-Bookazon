@@ -31,8 +31,13 @@ public class Cart {
         }
         System.out.println("\n");
     }
+
+
     
     public ArrayList<CartItem> getItems() {
         return items;
     }
+
+
+    
 }
