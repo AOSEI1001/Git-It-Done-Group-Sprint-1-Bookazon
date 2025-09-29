@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 
 public class Order {
+    private String name;
     private String dateCreated;
     private String dateShipped;
-    private String userName;
     private String orderStatus;
     private Address shippingAddress;
     private Address billingAddress;
@@ -29,15 +29,15 @@ public class Order {
         this.dateShipped = date;
     }
 
-    public void setUserName(String name) {
-        this.userName = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void printOrderDetails(User user) {
         System.out.println("Order Details:");
         System.out.println("Date Created: " + dateCreated);
         System.out.println("Date Shipped: " + dateShipped);
-        System.out.println("User Name: " + userName);
+        System.out.println("Name: " + name);
         System.out.println("Order Status: " + orderStatus);
         System.out.println("Shipping Address: " + this.shippingAddress);
         System.out.println("Shipping Address: " + this.billingAddress);
