@@ -40,7 +40,6 @@ public abstract class User {
         }
     }
 
-
     public void checkout() {
         Order order = new Order(cart, this);
         order.setOrderStatus("Order Placed");
