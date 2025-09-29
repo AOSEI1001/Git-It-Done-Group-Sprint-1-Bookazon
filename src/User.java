@@ -1,77 +1,63 @@
 
 import java.util.ArrayList;
 
-public class User {
-    private String name;
-    private String subscription;
-    private Cart cart;
-    private ArrayList<Order> orders;
-    // private String shippingAddressLine1;
-    // private String shippingAddressLine2;
-    // private String shippingAddressCity;
-    // private String shippingAddressState;
-    // private String shippingAddressZip;
-    // private String shippingAddressCountry;
-    // private String billingAddressLine1;
-    // private String billingAddressLine2;
-    // private String billingAddressCity;
-    // private String billingAddressState;
-    // private String billingAddressZip;
-    // private String billingAddressCountry;
+public abstract class User {
+    
+    private final String userName;
+    protected final Cart cart;
+    protected final ArrayList<Order> orders;
 
-    public User(String name, String subscription) {
-        this.name = name;
-        this.subscription = subscription;  // normal, gold, platinum, silver membership
+
+    public User(String userName){
+        this.userName = userName;
         this.cart = new Cart();
         this.orders = new ArrayList<>();
+
     }
 
-    public String getName() {
-        return name;
+    public String getName(){
+        return userName;
     }
 
-    public String getSubscription() {
-        return subscription;
-    }
-
-    public void setSubscription(String role) {
-        this.subscription = role;
-    }
-
-    public void viewCart() {
+    public void viewCart(){
         cart.viewCartDetails();
     }
 
- 
 
-    public void addToCart(Book book, int quantity) {
+    public void addToCart(Book book, int quantity){
         cart.addItem(new CartItem(book.getTitle(), book.getPrice(), quantity));
     }
 
-    public void removeFromCart(Book book) {
+    public void removeFromCart(Book book){
         for (CartItem item : cart.getItems()) {
             if (item.getName().equals(book.getTitle())) {
                 cart.getItems().remove(item);
                 break;
             }
         }
+
     }
 
-    public void viewOrders() {
+    public void viewOrders(){
         for (Order order : orders) {
             order.printOrderDetails();
         }
     }
 
+   
+
     public void checkout() {
-        Order order = new Order(cart, this.subscription);
+        Order order = new Order(cart, null);
         // order.setShippingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
         // order.setBillingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
         order.setOrderStatus("Order Placed");
         order.setDateCreated("2024-01-01");
-        order.setUserName(this.name);
+        order.setUserName(this.userName);
         orders.add(order);
     }
+
+
+    protected abstract double getDiscount();
 }
 
 

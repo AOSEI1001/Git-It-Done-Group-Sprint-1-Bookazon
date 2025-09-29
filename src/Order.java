@@ -5,6 +5,8 @@ public class Order {
     private String dateShipped;
     private String userName;
     private String orderStatus;
+    private Address shippingAddress;
+    private Address billingAddress;
     
     private ArrayList<CartItem> items;
     private double orderPrice;
@@ -37,9 +39,8 @@ public class Order {
         System.out.println("Date Shipped: " + dateShipped);
         System.out.println("User Name: " + userName);
         System.out.println("Order Status: " + orderStatus);
-        System.out.println();
-        // System.out.println("Shipping Address: " + shippingAddressLine1 + ", " + shippingAddressLine2 + ", " + shippingAddressCity + ", " + shippingAddressState + ", " + shippingAddressZip + ", " + shippingAddressCountry);
-        // System.out.println("Billing Address: " + billingAddressLine1 + ", " + billingAddressLine2 + ", " + billingAddressCity + ", " + billingAddressState + ", " + billingAddressZip + ", " + billingAddressCountry);
+        System.out.println("Shipping Address: " + this.shippingAddress);
+        System.out.println("Shipping Address: " + this.billingAddress);
         System.out.println("Order Price: $" + orderPrice);
     }
 
