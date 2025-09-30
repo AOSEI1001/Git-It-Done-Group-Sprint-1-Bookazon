@@ -63,8 +63,8 @@ public class Bookazon {
     Bookazon bookazon = new Bookazon();
 
     // Create users first, so ShippingInfo is close to usage
-    SubscriptionNormal alice = new SubscriptionNormal("Alice");
-    SubscriptionGold bob = new SubscriptionGold("Bob");
+    User alice = new SubscriptionNormal("Alice");
+    User bob = new SubscriptionGold("Bob");
     bookazon.addUser(alice);
     bookazon.addUser(bob);
 
