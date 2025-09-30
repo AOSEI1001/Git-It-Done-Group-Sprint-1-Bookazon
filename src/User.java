@@ -55,10 +55,10 @@ public abstract class User {
 
     public void checkout() {
         Order order = new Order(cart, this);
-        System.out.println("\n");
         order.setOrderStatus("Order Placed");
         order.setDateCreated(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
         order.setDateShipped(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        System.out.println("\n");
         order.setShippingInfo(this.shippingInfo);
         orders.add(order);
         
