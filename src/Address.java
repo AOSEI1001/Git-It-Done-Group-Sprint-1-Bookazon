@@ -14,5 +14,19 @@ public class Address {
         this.state = state;
         this.zip = zip;
         this.country = country;
-    }    
+    }  
+    
+     @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(line1);
+        if (line2 != null && !line2.isBlank()) {
+            sb.append(", ").append(line2);
+        }
+        sb.append(", ").append(city)
+          .append(", ").append(state)
+          .append(" ").append(zip)
+          .append(", ").append(country);
+        return sb.toString();
+    }
 }
