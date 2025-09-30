@@ -5,6 +5,8 @@ public class SubscriptionPlatinum extends User {
     public SubscriptionPlatinum(String userName) {
         super(userName);
     }
+
+	@Override
 	public double getDiscount() {
 		return PLANTINUMDISC;
 	}
