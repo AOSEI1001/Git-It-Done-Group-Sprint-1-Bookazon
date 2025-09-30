@@ -40,6 +40,7 @@ What we gained:
 * Clean code saves time in the long run.
 * GitHub is powerful when you use branches and PRs properly.
 * Collaboration beats coding solo — especially when someone catches your bug in review.
+* Communication is key, especially when you want to prevent merge conflicts.
 
 
 ## 🚀 Tools Utilized 
