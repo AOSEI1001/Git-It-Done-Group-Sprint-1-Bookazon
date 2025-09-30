@@ -6,6 +6,7 @@ public class SubscriptionNormal extends User {
         super(userName);
     }
 
+    @Override
 	public double getDiscount() {
 		return NORMALDISC;
 	}

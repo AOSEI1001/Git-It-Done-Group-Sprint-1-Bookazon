@@ -5,6 +5,8 @@ public class SubscriptionSilver extends User {
     public SubscriptionSilver(String userName) {
         super(userName);
     }
+
+	@Override
 	public double getDiscount() {
 		return SILVERDISC;
 	}

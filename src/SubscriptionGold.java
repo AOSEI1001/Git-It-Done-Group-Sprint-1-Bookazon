@@ -6,6 +6,7 @@ public class SubscriptionGold extends User {
         super(userName);
     }
 	
+	@Override
 	public double getDiscount() {
 		return GOLDDISC;
 	}

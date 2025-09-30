@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public abstract class User {
@@ -54,7 +56,8 @@ public abstract class User {
     public void checkout() {
         Order order = new Order(cart, this);
         order.setOrderStatus("Order Placed");
-        order.setDateCreated("2024-01-01");
+        order.setDateCreated(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
+        order.setDateShipped(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd")));
         order.setShippingInfo(this.shippingInfo);
         orders.add(order);
         
