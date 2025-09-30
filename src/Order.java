@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class Order {
-    private String name;
     private String dateCreated;
     private String dateShipped;
     private String orderStatus;
@@ -29,15 +28,11 @@ public class Order {
         this.dateShipped = date;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void printOrderDetails(User user) {
         System.out.println("Order Details:");
         System.out.println("Date Created: " + dateCreated);
         System.out.println("Date Shipped: " + dateShipped);
-        System.out.println("Name: " + name);
+        System.out.println("Name: " + user.getName());
         System.out.println("Order Status: " + orderStatus);
         System.out.println("Shipping Address: " + this.shippingAddress);
         System.out.println("Shipping Address: " + this.billingAddress);

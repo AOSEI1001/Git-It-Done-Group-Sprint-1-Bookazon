@@ -44,5 +44,6 @@ public class DVD extends MediaType {
         System.out.println("Director: " + getDirector());
         System.out.println("Year Published: " + getYearPublished());
         System.out.println("Price: $" + getPrice());
+        System.out.println("\n");
     }
 }
