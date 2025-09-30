@@ -38,6 +38,12 @@ public class Cart {
         return items;
     }
 
-
+    public void checkout(User user) {
+        Order order = new Order(this, user);
+        order.setOrderStatus("Order Placed");
+        order.setDateCreated("2024-01-01");
+        //order.setUserName(userName);
+        // add shipping and bill address
+    }
     
 }
