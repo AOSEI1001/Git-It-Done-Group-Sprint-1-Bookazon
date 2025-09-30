@@ -40,7 +40,6 @@ What we gained:
 * Clean code saves time in the long run.
 * GitHub is powerful when you use branches and PRs properly.
 * Collaboration beats coding solo — especially when someone catches your bug in review.
-* “Git It Done” isn’t just our name, it’s our philosophy.
 
 
 ## 🚀 Tools Utilized 
