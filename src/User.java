@@ -6,14 +6,24 @@ public abstract class User {
     protected final Cart cart;
     protected final ArrayList<Order> orders;
 
+    private ShippingInfo shippingInfo;
+    
+
+
     public User(String userName){
         this.userName = userName;
         this.cart = new Cart();
         this.orders = new ArrayList<>();
+        this.shippingInfo = new ShippingInfo();
+
     }
 
     public String getName(){
         return userName;
+    }
+
+    public void setShippingInfo(ShippingInfo info){
+        this.shippingInfo = info;
     }
 
     public void viewCart(){
@@ -40,15 +50,17 @@ public abstract class User {
         }
     }
 
+
     public void checkout() {
         Order order = new Order(cart, this);
         System.out.println("\n");
         order.setOrderStatus("Order Placed");
         order.setDateCreated("2024-01-01");
-        //order.setUserName(userName);
+        order.setShippingInfo(this.shippingInfo);
         orders.add(order);
-        System.out.println("\n");
-        // add shipping and bill address
+        
+
+        
     }
 
     protected abstract double getDiscount();
