@@ -7,20 +7,20 @@ public class Book extends MediaType {
   private String author;
   private boolean isPaperback;  // true if the book is paperback, false if it is hardcover
 
-  /** 
-   * Constructs a Book object with all fields specified. 
-   * 
-   * @param title         the title of the book
-   * @param author        the author of the book
-   * @param yearPublished the year the book was published
-   * @param price         the price of the book
-   * @param isPaperback   true if the book is paperback, false if hardcover
-   */
-  public Book(String title, String author, int yearPublished, double price, boolean isPaperback) {
+/**
+ * Constructs a Book object with all fields specified.
+ * 
+ * @param title         the title of the book
+ * @param author        the author of the book
+ * @param yearPublished the year the book was published
+ * @param price         the price of the book
+ * @param isPaperback   true if the book is paperback, false if hardcover
+ */
+public Book(String title, String author, int yearPublished, double price, boolean isPaperback) {
     super(title, yearPublished, price);
     this.author = author;
     this.isPaperback = isPaperback;
-  }
+}
 
   /** 
    * Returns the author of the book. 
