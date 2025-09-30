@@ -46,6 +46,7 @@ public abstract class User {
         order.setDateCreated("2024-01-01");
         //order.setUserName(userName);
         orders.add(order);
+        System.out.println("\n");
         // add shipping and bill address
     }
 

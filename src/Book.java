@@ -29,6 +29,7 @@ public class Book extends MediaType{
         System.out.println("Author: " + getAuthor());
         System.out.println("Year Published: " + getYearPublished());
         System.out.println("Price: $" + getPrice());
+        System.out.println("\n");
     }
 
     public boolean isAuthorValid() {
