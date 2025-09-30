@@ -33,6 +33,8 @@ public class Bookazon {
     public static void main(String[] args) {
         
         Bookazon bookazon = new Bookazon();
+
+        ShippingInfo shippingInfo = new ShippingInfo();
         
         // create books
         bookazon.inventory.addItem(new Book("The Great Gatsby", "F. Scott Fitzgerald", 1925, 9.99, true));
@@ -54,8 +56,11 @@ public class Bookazon {
         bookazon.getUser(0).viewCart();
 
         // set shipping address and billing address
-        // bookazon.getUser(0).setShippingAddress("123 Main St", "", "Springfield", "IL", "62701", "USA");
-        // bookazon.getUser(0).setBillingAddress("456 Elm St", "", "Springfield", "IL", "62702", "USA");
+        shippingInfo.setShippingAddress(new Address("123 Main St", "", "Springfield", "IL", "62701", "USA"));
+        shippingInfo.setBillingAddress(new Address("456 Oak Ave", "Apt 2", "Springfield", "IL", "62702", "USA"));
+
+        bookazon.getUser(0).setShippingInfo(shippingInfo);
+
 
         // checkout
         bookazon.getUser(0).checkout();

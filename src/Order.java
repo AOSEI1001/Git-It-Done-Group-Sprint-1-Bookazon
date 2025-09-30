@@ -4,8 +4,7 @@ public class Order {
     private String dateCreated;
     private String dateShipped;
     private String orderStatus;
-    private Address shippingAddress;
-    private Address billingAddress;
+    private ShippingInfo shippingInfo;
     private User user;
     
     private ArrayList<CartItem> items;
@@ -28,14 +27,21 @@ public class Order {
         this.dateShipped = date;
     }
 
+    public void setShippingInfo(ShippingInfo info){
+        this.shippingInfo = info;
+    }
+
+    
     public void printOrderDetails(User user) {
         System.out.println("Order Details:");
+        System.out.println("\n");
+
         System.out.println("Date Created: " + dateCreated);
         System.out.println("Date Shipped: " + dateShipped);
         System.out.println("Name: " + user.getName());
         System.out.println("Order Status: " + orderStatus);
-        System.out.println("Shipping Address: " + this.shippingAddress);
-        System.out.println("Shipping Address: " + this.billingAddress);
+        System.out.println("Shipping Address: " + shippingInfo.getShippingAddress());
+        System.out.println("Billing Address: " + shippingInfo.getBillingAddress());
         System.out.println("Order Price: $" + orderPrice);
         System.out.println("Discount:"+ user.getDiscount());
     }
