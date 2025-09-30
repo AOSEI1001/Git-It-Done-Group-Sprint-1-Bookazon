@@ -33,9 +33,7 @@ public class Order {
 
     
     public void printOrderDetails(User user) {
-        System.out.println("Order Details:");
-        System.out.println("\n");
-
+        System.out.println("\n==================== Order Details ====================");
         System.out.println("Date Created: " + dateCreated);
         System.out.println("Date Shipped: " + dateShipped);
         System.out.println("Name: " + user.getName());
@@ -44,6 +42,8 @@ public class Order {
         System.out.println("Billing Address: " + shippingInfo.getBillingAddress());
         System.out.println("Order Price: $" + orderPrice);
         System.out.println("Discount:"+ user.getDiscount());
+        System.out.println("=======================================================\n");
+
     }
 
     public double calculatePrice(User user) {

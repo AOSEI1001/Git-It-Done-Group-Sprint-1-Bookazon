@@ -40,10 +40,16 @@ public class DVD extends MediaType {
 
     @Override
     public void printDetails() {
+        System.out.println("\n=============== Item Details ===============");
+
         System.out.println("Title: " + getTitle());
         System.out.println("Director: " + getDirector());
+        System.out.println("\n");
         System.out.println("Year Published: " + getYearPublished());
         System.out.println("Price: $" + getPrice());
         System.out.println("\n");
+
+        System.out.println("=======================================================\n");
+
     }
 }

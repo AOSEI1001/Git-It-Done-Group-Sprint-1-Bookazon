@@ -51,11 +51,11 @@ public class Cart {
    * Prints the details of all items in the cart.
    */
   public void viewCartDetails() {
-    System.out.println("Cart Details:");
+    System.out.println("\n==================== Cart Details ====================");
     for (CartItem item : items) {
       System.out.println(item.getName() + " - Quantity: " + item.getQuantity());
     }
-    System.out.println();
+    System.out.println("=======================================================\n");
   }
 
   /**

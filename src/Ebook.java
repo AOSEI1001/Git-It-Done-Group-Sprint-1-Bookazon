@@ -25,12 +25,16 @@ public class Ebook extends MediaType{
     }
 
     public void printDetails() {
+        System.out.println("\n============== Item Details ==============");
         System.out.println("Title: " + getTitle());
         System.out.println("Author: " + getAuthor());
+        System.out.println("\n");
+
         System.out.println("Year Published: " + getYearPublished());
         System.out.println("Price: $" + getPrice());
         System.out.println("Format:" + getformat());
-        System.out.println("\n");
+        System.out.println("=======================================================\n");
+
     }
 
     public boolean isAuthorValid() {
