@@ -1,6 +1,6 @@
 # 📚 Bookazon
 
-*Brought to you by **Git It Done***
+*Brought to you by **Git It Done: Ini, Tony, Pramithas, and Abisa***
 
 ## 🌟 The Vision
 
