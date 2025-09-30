@@ -42,6 +42,10 @@ public class Bookazon {
         bookazon.inventory.addItem(new Ebook("Praire Winds", "Lohan Green", 1978, 25.67, false, null));
         bookazon.inventory.addItem(new DVD("Take Me Back", 15.54, 2005, "Freeman Morgan", 400));
 
+
+        // view item in inventory
+        bookazon.inventory.getItem(3).printDetails();
+
         // create users
         bookazon.addUser(new SubscriptionNormal("Alice"));
         bookazon.addUser(new SubscriptionGold("Bob"));
@@ -59,9 +63,6 @@ public class Bookazon {
 
         // checkout
         bookazon.getUser(0).checkout();
-
-        // // view order details
-        bookazon.inventory.getItem(3).printDetails();
 
         // view order details
         bookazon.getUser(0).viewOrders();
